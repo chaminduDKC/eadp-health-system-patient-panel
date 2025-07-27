@@ -1,0 +1,29 @@
+.login{
+    background: url("https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.login form {
+    width: 40%;
+    max-width: 500px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.login form label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #333;
+}
