@@ -11,6 +11,7 @@ import {
     TextField,
     Autocomplete, CircularProgress, IconButton, Alert, Collapse
 } from "@mui/material";
+import './appointment.css'
 import { LocalizationProvider, DatePicker } from '@mui/x-date-pickers';
 import {AdapterDayjs} from "@mui/x-date-pickers/AdapterDayjs";
 import axiosInstance from "../../../../util/axiosInstance.js";
@@ -266,12 +267,23 @@ const Appointment = () => {
   return (
       <>
 
-      <Box sx={{
-          display:"flex", marginTop: "50px", mx:"auto", width: "100%", gap: 3, flexDirection: { xs: 'column', sm: 'row' }, justifyContent: "center"
+      <Box className="appointment" sx={{
+          display:"flex", marginTop: "50px", mx:"auto", width: "100%", gap: 3, justifyContent: "center"
       }}>
           {
               open && (
-                  <Box sx={{ width: '50%', margin: "0 auto", position: "absolute", top: "65px", right: "0", left: "0", zIndex: "14" }}>
+                  <Box
+                      sx={{
+                          width: { xs: '96%', sm: '80%', md: '60%' },
+                          margin: "0 auto",
+                          position: "fixed",
+                          top: "65px",
+                          right: 0,
+                          left: 0,
+                          zIndex: 14,
+                          px: { xs: 1, sm: 0 }
+                      }}
+                  >
                       <Collapse in={open}>
                           <Alert
                               severity={alertStatus.includes("success") ? "success" : "error"}
@@ -284,8 +296,11 @@ const Appointment = () => {
                                       <CloseIcon />
                                   </IconButton>
                               }
+                              sx={{
+                                  fontSize: { xs: "0.95rem", sm: "1rem" },
+                                  alignItems: "center"
+                              }}
                           >
-
                               {alertStatus === "failed-fetch-doc" && "Failed to load doctors. Please refresh the page and try again."}
                               {alertStatus === "failed-fetch-my-appointments" && "Failed to load your booked appointments. Please refresh the page and try again."}
                               {alertStatus === "success-create-appointment" && "Appointment created successfully."}
@@ -303,7 +318,7 @@ const Appointment = () => {
                   </Box>
               )
           }
-    <Box sx={{ width: '30%', p: 2, display:"flex", flexDirection:"column",maxHeight:"700px", border:"1px solid var(--color-dark2)",borderRadius:2, gap:3,  }}>
+    <Box className="form" sx={{ width: '30%', p: 2, display:"flex", flexDirection:"column",maxHeight:"700px", border:"1px solid var(--color-dark2)",borderRadius:2, gap:2,  }}>
 
         <React.Fragment>
             <Dialog
@@ -472,7 +487,7 @@ const Appointment = () => {
         }}>cancel</Button>
         </Box>
     </Box>
-          <Box sx={{
+          <Box className="table" sx={{
               width:"60%",
               border:"1px solid var(--color-dark2)",
               borderRadius:2,

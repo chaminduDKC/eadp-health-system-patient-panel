@@ -174,7 +174,14 @@ export default function ViewDoctor() {
 
             {
                 open && (
-                    <Box sx={{ width: '50%', margin: "0 auto", position: "absolute", top: "65px", right: "0", left: "0", zIndex: "14" }}>
+                    <Box sx={{  width: { xs: '96%', sm: '70%', md: '50%' },
+                        margin: "0 auto",
+                        position: "fixed",
+                        top: "65px",
+                        right: 0,
+                        left: 0,
+                        zIndex: 14,
+                        px: { xs: 1, sm: 0 } }}>
                         <Collapse in={open}>
                             <Alert
                                 severity={alertStatus.includes("success") ? "success" : "error"}

@@ -115,14 +115,14 @@ const Home = () => {
 
                     <li><a style={{
                         color: mode === "dark" ? "var(--color-text)" : "var(--color-dark4)",
-                    }} href="#contact">Contact Us</a></li>
+                    }} href="#contact">Contact</a></li>
 
 
                 </ul>
                 <div className="info">
                     <li>
                         <i className="fa-solid fa-tty"></i>
-                        <p> 0112 212 211</p>
+                        <p> 0112212211</p>
                     </li>
                     <li>
                         <i className="fa-solid fa-envelope"></i>

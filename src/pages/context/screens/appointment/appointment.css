@@ -1,0 +1,69 @@
+.form{
+
+}
+@media screen and (max-width: 1146px){
+    .form{
+        width: 70%;
+        min-width: 700px;
+    }
+    .appointment{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .table{
+        width: 70%;
+        min-width: 700px;
+    }
+}
+
+@media screen and (max-width: 725px){
+    .form{
+        width: 50%;
+        min-width: 500px;
+    }
+    .appointment{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .table{
+        width: 70%;
+        min-width: 500px;
+    }
+}
+
+@media screen and (max-width: 545px){
+    .form{
+        width: 50%;
+        min-width: 450px;
+    }
+    .appointment{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .table{
+        width: 70%;
+        min-width: 450px;
+    }
+}
+@media screen and (max-width: 485px){
+    .form{
+        width: 50%;
+        min-width: 380px;
+    }
+    .appointment{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .table{
+        width: 70%;
+        min-width: 380px;
+    }
+}
