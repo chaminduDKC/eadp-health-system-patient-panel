@@ -268,7 +268,7 @@ const Appointment = () => {
       <>
 
       <Box className="appointment" sx={{
-          display:"flex", marginTop: "50px", mx:"auto", width: "100%", gap: 3, justifyContent: "center"
+          display:"flex", marginTop: "120px", mx:"auto", width: "100%", gap: 3, justifyContent: "center"
       }}>
           {
               open && (
@@ -277,7 +277,7 @@ const Appointment = () => {
                           width: { xs: '96%', sm: '80%', md: '60%' },
                           margin: "0 auto",
                           position: "fixed",
-                          top: "65px",
+                          top: "85px",
                           right: 0,
                           left: 0,
                           zIndex: 14,

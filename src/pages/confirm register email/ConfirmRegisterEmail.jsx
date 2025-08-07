@@ -11,6 +11,7 @@ const ConfirmRegisterEmail = () => {
 
   const location = useLocation();
   const email = location.state?.email || '';
+  const USER_API_URL = import.meta.env.VITE_USER_SERVICE_URL || 'http://localhost:9090/api/users';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,7 +19,7 @@ const ConfirmRegisterEmail = () => {
     setError('');
     console.log(email)
     try {
-      await axios.post('http://localhost:9090/api/users/verify-user', {}, {params:{email:email, otp:otp}}).then(res=>{
+      await axios.post(`${USER_API_URL}/verify-user`, {}, {params:{email:email, otp:otp}}).then(res=>{
         console.log(res)
       });
       setLoading(false);

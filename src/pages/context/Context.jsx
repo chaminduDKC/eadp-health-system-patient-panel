@@ -9,11 +9,17 @@ const Context = () => {
     return (
         <div className="context">
             {/*<TopHeader />*/}
+            <div className="header-div">
+
             <Header />
+            </div>
             <div className="outlet">
             <Outlet />
             </div>
+            <div className="footer-div">
+
             <Footer />
+            </div>
         </div>
     )
 }

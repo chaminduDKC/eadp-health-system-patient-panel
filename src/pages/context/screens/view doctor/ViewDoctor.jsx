@@ -18,7 +18,7 @@ const columns = [
     { id: 'name', label: 'Name', minWidth: 100 },
     { id: 'specialization', label: 'Specialization', minWidth: 100 },
     { id: 'hospital', label: 'Hospital', minWidth: 100 },
-    { id: 'city', label: 'City', minWidth: 80 },
+    // { id: 'city', label: 'City', minWidth: 80 },{ id: 'city', label: 'City', minWidth: 80 },
 
 ];
 
@@ -120,7 +120,7 @@ export default function ViewDoctor() {
     // ------------------------------------------------------------------
 
     return (
-        <Box sx={{ width: '90%', mx: 'auto' , marginTop:"50px"}}>
+        <Box sx={{ width: '60%', minWidth:"90vw", mx: 'auto' , marginTop:"120px", marginBottom:"20px"}}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap:5, height:"55px", marginBottom:"20px" }}>
                 <Autocomplete
                     sx={{

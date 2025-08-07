@@ -5,6 +5,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: none; /* Firefox */
+    height: 90vh;
 }
 .home::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
@@ -19,7 +20,7 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     position: fixed;
     z-index: 1;
-    top: 60px;
+    top: 80px;
 
 }
 .links{
@@ -226,6 +227,7 @@ text-decoration: none;
 
 .contact{
     padding-top: 100px ;
+    margin-bottom: 50px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: flex-start;
@@ -428,6 +430,7 @@ h1{
         grid-template-columns: repeat(1, 1fr);
         align-items: flex-start;
         gap: 20px;
+
     }
     .news-welcome ,
     .services,

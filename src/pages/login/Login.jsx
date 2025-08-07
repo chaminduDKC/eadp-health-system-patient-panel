@@ -72,6 +72,11 @@ export default function Login({ onLogin }) {
             }
         } catch (error) {
             setLoading(false);
+            if(error.code === "ERR_NETWORK"){
+                setError("Network error. Please check your connection.");
+                return;
+            }
+            console.log(error)
             setError(error.response.data.error_description);
         }
     };
@@ -83,13 +88,22 @@ export default function Login({ onLogin }) {
                 justifyContent: "center",
                 alignItems: "center",
                 minHeight: "100vh",
+                width:"95%",
+                mx:"auto"
 
             }}
         >
             <Paper
                 elevation={4}
                 sx={{
-                    p: 4,
+                    p: {
+                        xl:4,
+                        lg:4,
+                        md:3,
+                        sm:2,
+                        xs:1
+
+                    },
                     borderRadius: 3,
                     minWidth: 350,
                     maxWidth: 400,

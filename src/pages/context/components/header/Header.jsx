@@ -102,14 +102,15 @@ const Header = ()=>{
             }} ).then((res)=>{
             setNewEmail("")
             console.log(res.data)
+            showAlert("success-change-email");
 
             setTimeout(() => {
+                localStorage.removeItem("access_token");
+                localStorage.removeItem("refresh_token");
+                window.location.href = "/login";
+            }, 3000);
 
-            }, 2000);
-            showAlert("success-change-email");
-            localStorage.removeItem("access_token");
-            localStorage.removeItem("refresh_token");
-            window.location.href = "/login";
+
             // setEmail("")
         }).catch((err)=>{
             console.log(err)
@@ -125,7 +126,7 @@ const Header = ()=>{
                     <Box sx={{ width: { xs: '96%', sm: '70%', md: '50%' },
                         margin: "0 auto",
                         position: "fixed",
-                        top: "65px",
+                        top: "93px",
                         right: 0,
                         left: 0,
                         zIndex: 14,
@@ -153,19 +154,24 @@ const Header = ()=>{
                 )
             }
             {/* Navigation Bar */}
-            <div className="header" style={{ backgroundColor: mode === "dark" ? "var(--color-dark3)" : "white" }}>
+            <div className="header" style={{ backgroundColor: mode === "dark" ? "var(--color-dark3)" : "var(--color-gray)" }}>
                 <div className="logo">
                     <img className="logo-image" src={logo} alt="Logo" />
                 </div>
                 <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
                     {menuOpen ? "✖" : "☰"}
                 </button>
-                <nav className={`nav${menuOpen ? " open" : ""}`}>
-                    <NavLink to="/" onClick={() => setMenuOpen(false)}>Home</NavLink>
-                    <NavLink to="/context/appointments" onClick={() => setMenuOpen(false)}>Appointments</NavLink>
-                    <NavLink to="/context/history" onClick={() => setMenuOpen(false)}>History</NavLink>
-                    <NavLink to="/context/reviews" onClick={() => setMenuOpen(false)}>Reviews</NavLink>
-                    <NavLink to="/context/contact" onClick={() => setMenuOpen(false)}>Contact</NavLink>
+                <nav  className={`nav${menuOpen ? " open" : ""}`}>
+                    <NavLink style={{
+                        color:mode === "dark" ? "var(--color-gray)" : "var(--color-dark3)"
+                    }} to="/" onClick={() => setMenuOpen(false)}>Home</NavLink>
+                    <NavLink style={{
+                        color:mode === "dark" ? "var(--color-gray)" : "var(--color-dark3)"
+                    }} to="/context/doctors" onClick={() => setMenuOpen(false)}>Doctors</NavLink>
+                    <NavLink style={{
+                        color:mode === "dark" ? "var(--color-gray)" : "var(--color-dark3)"
+                    }} to="/context/appointments" onClick={() => setMenuOpen(false)}>Appointments</NavLink>
+
                     {/* Add more links as needed */}
                 </nav>
                 {/*settings modal*/}

@@ -1,0 +1,18 @@
+/* context.css */
+.context {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header-div {
+    /* optional: styles for header container */
+}
+
+.outlet {
+    flex: 1; /* this fills remaining space and pushes footer down */
+}
+
+.footer-div {
+    /* optional: styles for footer container */
+}
